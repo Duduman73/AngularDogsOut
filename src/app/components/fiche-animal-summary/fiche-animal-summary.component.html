@@ -1,0 +1,14 @@
+<div class='recipe panel panel-default' (click)="userClicked()">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{ ficheAnimal.nomAnim }}</h3>
+  </div>
+  <div class="panel-body">
+    <div class='cover-photo-holder'>
+      <img src="{{ ficheAnimal.cover_photo ? ficheAnimal.cover_photo : '/assets/Image_Chien.jpg' }}"/>
+    </div>
+    <p>{{ ficheAnimal.age }}</p>
+    <p *ngIf="ficheAnimal.sexe"> Female </p>
+    <p *ngIf="!ficheAnimal.sexe"> Male </p>
+
+  </div>
+</div>
