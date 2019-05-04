@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FicheAnimal } from '../../model/ficheAnimal';
-import { ParamMap, ActivatedRoute } from '@angular/router';
+import { ParamMap, ActivatedRoute, Router } from '@angular/router';
 import { FicheAnimalService } from '../../services/fiche-animal.service';
 import { Location } from '@angular/common';
 
@@ -15,7 +15,8 @@ export class AdherentFicheDetailsComponent implements OnInit {
 
   fichesAnimal: FicheAnimal[];
 
-  constructor(private route: ActivatedRoute, private ficheAnimalService: FicheAnimalService, private location: Location) { }
+  constructor(private route: ActivatedRoute, private ficheAnimalService: FicheAnimalService, private location: Location,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) =>  {
@@ -42,4 +43,14 @@ export class AdherentFicheDetailsComponent implements OnInit {
   goBackButtonPressed(): void {
     this.location.back();
   }
+
+  public deleteButtonPressed(): void {
+    this.ficheAnimalService.deleteFicheAnimal(this.ficheAnimal).subscribe((response) => {
+      this.router.navigateByUrl('/compteAdherent');
+    });
+  }
+
+  /*public editButtonPressed(): void {
+    this.router.navigateByUrl('/editnewFicheAnimal/' + this.ficheAnimal.idAnim);
+  }*/
 }
