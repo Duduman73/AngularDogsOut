@@ -1,3 +1,51 @@
 <p>
   edit-new-fiche-animal works!
 </p>
+
+<div class="newFicheAnimal panel panel-default">
+  <div class="panel-heading">
+    <h4>Creation d'une nouvelle fiche</h4>
+  </div>
+  <div class="panel-body">
+    <div class="form-group">
+      <input class="form-control" [(ngModel)]="ficheAnimal_in_progress.nomAnim" type="text" name="nom"/>
+    </div>
+    <div class="form-group">
+      <textarea rows="5" [(ngModel)]="ficheAnimal_in_progress.description" class="form-control" name="description">
+      </textarea>
+    </div>
+    <div class="input-group">
+      <label>Age : </label>
+      <input type="text" class="form-control" [(ngModel)]="ficheAnimal_in_progress.age" name="age"/>
+      <span class="input-group-addon"> ans</span>
+    </div>
+    <div class="input-group">
+      <label>Race : </label>
+      <input type="text" class="form-control" [(ngModel)]="ficheAnimal_in_progress.race" name="race"/>
+    </div>
+    <div class="input-group">
+      <label>Personnalité : </label>
+      <input type="text" class="form-control" [(ngModel)]="ficheAnimal_in_progress.personnalite" name="personnalite"/>
+    </div>
+    <div class="input-group">
+      <label>Humeur : </label>
+      <input type="text" class="form-control" [(ngModel)]="ficheAnimal_in_progress.humeur" name="humeur"/>
+    </div>
+    <div class="input-group">
+      <label>Lieu préféré : </label>
+      <input type="text" class="form-control" [(ngModel)]="ficheAnimal_in_progress.lieuPrefere" name="lieu prefere"/>
+    </div>
+    <div class="input-group">
+        <label>Sexe : </label>
+        <input type="text" class="form-control" [(ngModel)]="ficheAnimal_in_progress.sexe" name="sexe"/>
+      </div>
+    <div class="input-group">
+        <label>Identifiant adhérent : </label>
+        <input type="text" class="form-control" [(ngModel)]="ficheAnimal_in_progress.idAd" name="idAd"/>
+      </div>
+    <div class="input-group">
+      <input type="button" value="Ajout Fiche" (click)="addUpdateFicheAnimalClicked()"/>
+    </div>
+
+  </div>
+</div>
