@@ -13,7 +13,7 @@ import { FicheAnimalDetailsComponent } from './components/fiche-animal-details/f
 import { AdherentSummaryComponent } from './components/adherent-summary/adherent-summary.component';
 import { AdherentCompteComponent } from './components/adherent-compte/adherent-compte.component';
 import { AdherentFicheAnimalComponent } from './components/adherent-fiche-animal/adherent-fiche-animal.component';
-import { AdherentFADetailsComponent } from './components/adherent-fadetails/adherent-fadetails.component';
+import { AdherentFicheDetailsComponent } from './components/adherent-fiche-details/adherent-fiche-details.component';
 
 
 @NgModule({
@@ -25,6 +25,7 @@ import { AdherentFADetailsComponent } from './components/adherent-fadetails/adhe
     AdherentSummaryComponent,
     AdherentCompteComponent,
     AdherentFicheAnimalComponent,
+    AdherentFicheDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +50,10 @@ import { AdherentFADetailsComponent } from './components/adherent-fadetails/adhe
       path: 'compteAdherent',
       component: AdherentCompteComponent
       },
+      {
+        path: 'compteAdherent/:idAnim',
+        component: AdherentFicheDetailsComponent
+      }
   ]),
   ],
   providers: [],

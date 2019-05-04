@@ -38,7 +38,7 @@ export class AdherentCompteComponent implements OnInit {
   }
 
   userClickedOnFicheAnimal(idAnim): void {
-    this.router.navigateByUrl('/compteadherent/' + idAnim);
+    this.router.navigateByUrl('/compteAdherent/' + idAnim);
   }
 
 
