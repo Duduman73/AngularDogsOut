@@ -50,7 +50,7 @@ export class AdherentFicheDetailsComponent implements OnInit {
     });
   }
 
-  /*public editButtonPressed(): void {
+  public editButtonPressed(): void {
     this.router.navigateByUrl('/editnewFicheAnimal/' + this.ficheAnimal.idAnim);
-  }*/
+  }
 }

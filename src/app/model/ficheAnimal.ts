@@ -30,5 +30,8 @@ export class FicheAnimal {
     return new FicheAnimal(obj.idAnim, obj.nomAnim, obj.race, obj.age, obj.sexe,
                             obj.personnalite, obj.humeur, obj.description, obj.lieuPrefere, obj.cover_photo);
                 }
+    public static createBlank(): FicheAnimal {
+        return new FicheAnimal(-1, '', '', 1, true, '', '', '', '', null);
+    }
 
 }

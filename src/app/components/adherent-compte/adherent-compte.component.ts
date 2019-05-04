@@ -15,7 +15,13 @@ export class AdherentCompteComponent implements OnInit {
   adherent: Adherent;
   fichesAnimal: FicheAnimal[];
 
+  ficheAnimal_in_progress: FicheAnimal;
+
+
   constructor(private adherentService: AdherentService, private ficheAnimalService: FicheAnimalService, private router: Router) {
+
+    this.ficheAnimal_in_progress = FicheAnimal.createBlank();
+
     this.getAdherentById(1);
     this.getAllFicheAnimalWhereIdAd();
   }
@@ -41,5 +47,14 @@ export class AdherentCompteComponent implements OnInit {
     this.router.navigateByUrl('/compteAdherent/' + idAnim);
   }
 
+  public addFicheAnimalClicked() {
+    console.log(JSON.stringify(this.ficheAnimal_in_progress, null, 2));
+    this.fichesAnimal.unshift(this.ficheAnimal_in_progress);
+    this.ficheAnimal_in_progress = FicheAnimal.createBlank();
+  }
+
+  addNewFicheAnimalPressed(): void {
+    this.router.navigateByUrl('/editnewFicheAnimal');
+  }
 
 }
