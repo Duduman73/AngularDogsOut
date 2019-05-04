@@ -1,0 +1,2 @@
+<app-adherent-summary [adherent] = "adherent"></app-adherent-summary>
+<app-adherent-fiche-animal *ngFor="let ficheAnimal of fichesAnimal" [ficheAnimal]="ficheAnimal" (userClick)="userClickedOnRecipe($event)"></app-adherent-fiche-animal>

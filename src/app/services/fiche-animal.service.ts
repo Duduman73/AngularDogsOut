@@ -38,4 +38,8 @@ export class FicheAnimalService {
     return this.http.put<FicheAnimal>(FICHEANIMAL_SERVER + '/ficheAnimal/' + ficheAnimal.idAnim,
     JSON.stringify(ficheAnimal), this.httpOptions);
   }
+
+  public getAllFicheAnimalWhereIdAd(): Observable<any> {
+    return this.http.get<FicheAnimal>(FICHEANIMAL_SERVER + '/ficheAnimal/all/1');
+  }
 }

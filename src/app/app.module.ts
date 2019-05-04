@@ -10,6 +10,10 @@ import { AppComponent } from './app.component';
 import { FicheAnimalSummaryComponent } from './components/fiche-animal-summary/fiche-animal-summary.component';
 import { FicheAnimalListComponent } from './components/fiche-animal-list/fiche-animal-list.component';
 import { FicheAnimalDetailsComponent } from './components/fiche-animal-details/fiche-animal-details.component';
+import { AdherentSummaryComponent } from './components/adherent-summary/adherent-summary.component';
+import { AdherentCompteComponent } from './components/adherent-compte/adherent-compte.component';
+import { AdherentFicheAnimalComponent } from './components/adherent-fiche-animal/adherent-fiche-animal.component';
+import { AdherentFADetailsComponent } from './components/adherent-fadetails/adherent-fadetails.component';
 
 
 @NgModule({
@@ -17,7 +21,10 @@ import { FicheAnimalDetailsComponent } from './components/fiche-animal-details/f
     AppComponent,
     FicheAnimalSummaryComponent,
     FicheAnimalListComponent,
-    FicheAnimalDetailsComponent
+    FicheAnimalDetailsComponent,
+    AdherentSummaryComponent,
+    AdherentCompteComponent,
+    AdherentFicheAnimalComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,12 +38,17 @@ import { FicheAnimalDetailsComponent } from './components/fiche-animal-details/f
       },
       {
         path: '',
-        redirectTo: '/fichesAnimal',
+        redirectTo: '/compteAdherent',
         pathMatch: 'full'
       },
-      {path: 'fichesAnimal/:ficheAnimal_idAnim',
+      {
+      path: 'fichesAnimal/:ficheAnimal_idAnim',
       component: FicheAnimalDetailsComponent
-      }
+      },
+      {
+      path: 'compteAdherent',
+      component: AdherentCompteComponent
+      },
   ]),
   ],
   providers: [],
