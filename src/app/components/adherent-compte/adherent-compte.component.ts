@@ -23,7 +23,7 @@ export class AdherentCompteComponent implements OnInit {
     this.ficheAnimal_in_progress = FicheAnimal.createBlank();
 
     this.getAdherentById(1);
-    this.getAllFicheAnimalWhereIdAd();
+    this.findByAdherent(1);
   }
 
   ngOnInit() {
@@ -35,9 +35,9 @@ export class AdherentCompteComponent implements OnInit {
       console.log(this.adherent);
     });
   }
-  public getAllFicheAnimalWhereIdAd(): void {
-    this.ficheAnimalService.getAllFicheAnimalWhereIdAd().subscribe((response) => {
-      console.log(response['_body'] );
+
+  public findByAdherent(adherent: 1): void {
+    this.ficheAnimalService.findByAdherent(adherent).subscribe((response) => {
       this.fichesAnimal = response;
       console.log(this.fichesAnimal);
     });
@@ -55,6 +55,10 @@ export class AdherentCompteComponent implements OnInit {
 
   addNewFicheAnimalPressed(): void {
     this.router.navigateByUrl('/editnewFicheAnimal');
+  }
+
+  public ficheAnimalListButtonPressed(): void {
+    this.router.navigateByUrl('/fichesAnimal/');
   }
 
 }

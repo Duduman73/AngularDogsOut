@@ -39,7 +39,8 @@ export class FicheAnimalService {
     JSON.stringify(ficheAnimal), this.httpOptions);
   }
 
-  public getAllFicheAnimalWhereIdAd(): Observable<any> {
-    return this.http.get<FicheAnimal>(FICHEANIMAL_SERVER + '/ficheAnimal/all/1');
+  public findByAdherent(adherent: number): Observable<any> {
+    return this.http.get<FicheAnimal>(FICHEANIMAL_SERVER + '/ficheAnimal/all/' + adherent);
   }
+
 }

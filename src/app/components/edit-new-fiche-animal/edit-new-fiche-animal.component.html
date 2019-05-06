@@ -1,7 +1,3 @@
-<p>
-  edit-new-fiche-animal works!
-</p>
-
 <div class="newFicheAnimal panel panel-default">
   <div class="panel-heading">
     <h4>Creation d'une nouvelle fiche</h4>
@@ -39,9 +35,9 @@
         <label>Sexe : </label>
         <input type="text" class="form-control" [(ngModel)]="ficheAnimal_in_progress.sexe" name="sexe"/>
       </div>
-    <div class="input-group">
+      <div class="input-group">
         <label>Identifiant adhérent : </label>
-        <input type="text" class="form-control" [(ngModel)]="ficheAnimal_in_progress.idAd" name="idAd"/>
+        <input type="text" class="form-control" [(ngModel)]="ficheAnimal_in_progress.adherent.idAd" name="idAd"/>
       </div>
     <div class="input-group">
       <input type="button" value="Ajout Fiche" (click)="addUpdateFicheAnimalClicked()"/>
