@@ -44,14 +44,6 @@ export class FicheAnimalDetailsComponent implements OnInit {
    // this.router.navigateByUrl('/editNewficheAnimal/' + this.ficheAnimal.idAnim);
  // }
 
-  public deleteButtonPressed(): void {
-    this.ficheAnimalService.deleteFicheAnimal(this.ficheAnimal).subscribe(
-      (response) => {
-        this.router.navigateByUrl('/fichesAnimal');
-      }
-    );
-    }
-
     public getFicheAnimalById(idAnim: number): void {
       this.ficheAnimalService.getFicheAnimalById(idAnim).subscribe((response) => {
         this.ficheAnimal = response;

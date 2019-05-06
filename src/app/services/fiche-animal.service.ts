@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FicheAnimal } from '../model/ficheAnimal';
 import { Observable } from 'rxjs';
+
 const FICHEANIMAL_SERVER = 'http://localhost:8080';
 
 @Injectable({
