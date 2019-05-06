@@ -29,6 +29,11 @@ export class AdherentService {
     return this.http.get<Adherent>(ADHERENT_SERVER + '/adherent/' + idAd);
   }
 
+  public createAdherent(adherent: Adherent): Observable<any> {
+    return this.http.post<Adherent>(ADHERENT_SERVER + '/adherent/ajoutAdherent',
+    JSON.stringify(adherent), this.httpOptions);
+  }
+
   public updateAdherent(adherent: Adherent): Observable<any> {
     return this.http.put<Adherent>(ADHERENT_SERVER + '/adherent/' + adherent.idAd,
     JSON.stringify(adherent), this.httpOptions);

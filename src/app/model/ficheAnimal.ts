@@ -14,7 +14,7 @@ export class FicheAnimal {
 
 
     constructor(idAnim: number, nomAnim: string, race: string, age: number, sexe: boolean,
-        personnalite: string, humeur: string, description: string, lieuPrefere: string, 
+        personnalite: string, humeur: string, description: string, lieuPrefere: string,
         cover_photo: string, adherent: Adherent) {
         this.idAnim = idAnim;
         this.nomAnim = nomAnim;

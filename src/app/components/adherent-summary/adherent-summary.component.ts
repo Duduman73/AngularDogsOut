@@ -1,6 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Adherent } from '../../model/adherent';
-import { FicheAnimal } from '../../model/ficheAnimal';
 
 @Component({
   selector: 'app-adherent-summary',
@@ -12,6 +11,13 @@ export class AdherentSummaryComponent implements OnInit {
   @Input()
   adherent: Adherent;
 
+  @Output()
+  userClick: EventEmitter<number> = new EventEmitter();
+
+
+  userClicked() {
+    this.userClick.emit(this.adherent.idAd);
+  }
 
   constructor() { }
 

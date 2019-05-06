@@ -15,7 +15,7 @@ export class EditNewFicheAnimalComponent implements OnInit {
   mode_access: string;
 
   constructor(private ficheAnimalService: FicheAnimalService, private route: ActivatedRoute,
-    private router: Router, private adherentService: AdherentService) {
+              private router: Router, private adherentService: AdherentService) {
     this.ficheAnimal_in_progress = FicheAnimal.createBlank();
     console.log(this.ficheAnimal_in_progress);
   }
@@ -44,6 +44,7 @@ export class EditNewFicheAnimalComponent implements OnInit {
       }
     );
   }
+
   public addFicheAnimal(ficheAnimal: FicheAnimal): void {
 
     this.adherentService.getAdherentById(ficheAnimal.adherent.idAd).subscribe(

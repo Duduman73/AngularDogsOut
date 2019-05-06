@@ -2,14 +2,9 @@
   <div class="panel-heading">
     <h3 class="panel-title">Bienvenue {{ adherent.pseudonyme }}</h3>
   </div>
-  <div class="panel-body">
+  <div class="panel-body" (click)="userClicked()">
     <p>Nom: {{ adherent.nom }}</p>
     <p>Prenom : {{ adherent.prenom }}</p>
-    <p>Age : {{ adherent.age }}</p>
-    <p>Id adhérent : {{ adherent.idAd }}</p>
-    <p>Adresse : {{ adherent.adresse }}</p>
-    <p>Ville : {{ adherent.ville }}</p>
-    <p>Code postale : {{ adherent.cp }}</p>
     <p>Email : {{ adherent.email }}</p>
   </div>
 </div>

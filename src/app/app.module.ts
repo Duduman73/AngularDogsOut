@@ -15,6 +15,8 @@ import { AdherentCompteComponent } from './components/adherent-compte/adherent-c
 import { AdherentFicheAnimalComponent } from './components/adherent-fiche-animal/adherent-fiche-animal.component';
 import { AdherentFicheDetailsComponent } from './components/adherent-fiche-details/adherent-fiche-details.component';
 import { EditNewFicheAnimalComponent } from './components/edit-new-fiche-animal/edit-new-fiche-animal.component';
+import { AdherentCompteDetailsComponent } from './components/adherent-compte-details/adherent-compte-details.component';
+import { AdherentCompteEditComponent } from './components/adherent-compte-edit/adherent-compte-edit.component';
 
 
 @NgModule({
@@ -28,6 +30,8 @@ import { EditNewFicheAnimalComponent } from './components/edit-new-fiche-animal/
     AdherentFicheAnimalComponent,
     AdherentFicheDetailsComponent,
     EditNewFicheAnimalComponent,
+    AdherentCompteDetailsComponent,
+    AdherentCompteEditComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,6 +67,14 @@ import { EditNewFicheAnimalComponent } from './components/edit-new-fiche-animal/
       {
         path: 'editnewFicheAnimal/:idAnim',
         component: EditNewFicheAnimalComponent
+      },
+      {
+        path: 'compteAdherent/Adherent/:idAd',
+        component: AdherentCompteDetailsComponent
+      },
+      {
+        path: 'compteAdherentEdit/:idAd',
+        component: AdherentCompteEditComponent
       }
   ]),
   ],
