@@ -20,6 +20,10 @@ import { AdminCreateEventComponent } from './components/admin-create-event/admin
 import { AdminEvenementSummaryComponent } from './components/admin-evenement-summary/admin-evenement-summary.component';
 import { AdminEvenementListComponent } from './components/admin-evenement-list/admin-evenement-list.component';
 import { AdminEvenementDetailsComponent } from './components/admin-evenement-details/admin-evenement-details.component';
+import { AdminAdherentSummaryComponent } from './components/admin-adherent-summary/admin-adherent-summary.component';
+import { AdminAdherentListComponent } from './components/admin-adherent-list/admin-adherent-list.component';
+import { AdminAdherentDetailsComponent } from './components/admin-adherent-details/admin-adherent-details.component';
+
 
 
 @NgModule({
@@ -37,8 +41,11 @@ import { AdminEvenementDetailsComponent } from './components/admin-evenement-det
     AdminCreateEventComponent,
     AdminEvenementSummaryComponent,
     AdminEvenementListComponent,
-    AdminEvenementDetailsComponent
-  ],
+    AdminEvenementDetailsComponent,
+    AdminAdherentSummaryComponent,
+    AdminAdherentListComponent,
+    AdminAdherentDetailsComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -47,7 +54,7 @@ import { AdminEvenementDetailsComponent } from './components/admin-evenement-det
     RouterModule.forRoot([
       {
         path: '',
-        redirectTo: '/adminEvenements',
+        redirectTo: '/adminAdherents',
         pathMatch: 'full'
       },
       {
@@ -83,8 +90,17 @@ import { AdminEvenementDetailsComponent } from './components/admin-evenement-det
         path: 'evenements',
         component: EvenementListComponent
       },
-      {path: 'evenements/:evenement_idEvent',
-      component: EvenementDetailsComponent
+      {
+        path: 'evenements/:evenement_idEvent',
+        component: EvenementDetailsComponent
+      },
+      {
+        path: 'adminAdherents',
+        component: AdminAdherentListComponent
+      },
+      {
+        path: 'adminAdherents/:adminAdherent_idAd',
+        component: AdminAdherentDetailsComponent
       }
   ]),
   ],
