@@ -40,10 +40,6 @@ export class FicheAnimalDetailsComponent implements OnInit {
     this.location.back();
   }
 
-  //public editButtonPressed(): void {
-   // this.router.navigateByUrl('/editNewficheAnimal/' + this.ficheAnimal.idAnim);
- // }
-
   public deleteButtonPressed(): void {
     this.ficheAnimalService.deleteFicheAnimal(this.ficheAnimal).subscribe(
       (response) => {
@@ -59,4 +55,7 @@ export class FicheAnimalDetailsComponent implements OnInit {
       });
     }
 
+    addNewMessagePressed(): void {
+      this.router.navigateByUrl('/Message');
+    }
 }

@@ -1,0 +1,14 @@
+<div class="message">
+    <div class="input-group">
+        <label>Objet du message : </label>
+        <input type="text" class="form-control" name="objet"/>
+      </div>
+    <div class="form-group">
+      <label>Message : </label>
+        <textarea rows="10" class="form-control" name="description">
+        </textarea>
+    </div>
+</div>
+
+<div style="float: right; padding: 5px"><input type="button" value="Valider message"
+  (click)="validationMessagePressed()"/></div>
