@@ -1,0 +1,17 @@
+<p><a (click)="goBackButtonPressed()" style='cursor: pointer'>Go Back</a>
+  <a (click)="editButtonPressed()" style='cursor: pointer'>Edit </a>
+  <a (click)="deleteButtonPressed()" style='cursor: pointer'>Delete</a></p>
+  <div class='evenement panel panel-default'>
+  <div class="panel-heading">
+    <h3 class="panel-title">{{ evenement.nomEvent }}</h3>
+  </div>
+  <div class="panel-body">
+    <p>{{ evenement.lieu }}</p>
+    <div>
+      <div class="data-title">Date début:</div>
+      <div>{{ evenement.dateDeb }}</div>
+      <div class="data-title">Date fin:</div>
+      <div>{{ evenement.dateFin }}</div>
+      </div>
+  </div>
+</div>

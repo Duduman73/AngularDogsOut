@@ -1,0 +1,32 @@
+  <div class="newrevent panel panel-default">
+    <div class="panel-heading">
+      <h4>Ajouter un Evenement</h4>
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+        <input class="form-control" [(ngModel)]="evenement_in_progress.nomEvent" type="text" 
+        placeholder="Nom de l'évenement" name="nomEvent" />
+      </div>
+  
+      <div class="input-group">
+          <input type="text" class="form-control" [(ngModel)]="evenement_in_progress.lieu" 
+          placeholder="Entrez un lieu" name="lieu" />
+      </div>
+  
+      <div class="input-group">
+            <input type="text" class="form-control" [(ngModel)]="evenement_in_progress.dateDeb" 
+            placeholder="jj/mm/aaaa" name="dateDeb" />
+        </div>
+      <div class="input-group">
+          <input type="text" class="form-control" [(ngModel)]="evenement_in_progress.dateFin" 
+          placeholder="jj/mm/aaaa" name="dateFin" />
+      </div>  
+    </div>
+    <div class="input-group">
+        <input type="text" class="form-control" [(ngModel)]="evenement_in_progress.admin.numAdmin" 
+        placeholder="Votre ID" name="numAdmin" />
+    </div>  
+    <div class = "input-group">
+        <input type="button" value="Ajouter un Evenement" (click) ="addUpdateEvenementClicked()"/>
+    </div>
+  </div>

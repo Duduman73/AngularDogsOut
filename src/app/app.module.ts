@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -19,6 +20,20 @@ import { AdherentCompteDetailsComponent } from './components/adherent-compte-det
 import { AdherentCompteEditComponent } from './components/adherent-compte-edit/adherent-compte-edit.component';
 import { AdherentFormMessageComponent } from './components/adherent-form-message/adherent-form-message.component';
 import { AccueilComponent } from './components/accueil/accueil.component';
+import { AdminCompteComponent } from './components/admin-compte/admin-compte.component';
+import { AdminCreateEventComponent } from './components/admin-create-event/admin-create-event.component';
+import { AdminFicheListComponent } from './components/admin-fiche-list/admin-fiche-list.component';
+import { AdminFicheDetailsComponent } from './components/admin-fiche-details/admin-fiche-details.component';
+import { AdminEvenementListComponent } from './components/admin-evenement-list/admin-evenement-list.component';
+import { AdminEvenementDetailsComponent } from './components/admin-evenement-details/admin-evenement-details.component';
+import { EvenementListComponent } from './components/evenement-list/evenement-list.component';
+import { EvenementDetailsComponent } from './components/evenement-details/evenement-details.component';
+import { AdminAdherentListComponent } from './components/admin-adherent-list/admin-adherent-list.component';
+import { AdminAdherentDetailsComponent } from './components/admin-adherent-details/admin-adherent-details.component';
+import { AdminFichSummaryComponent } from './components/admin-fich-summary/admin-fich-summary.component';
+import { AdminEvenementSummaryComponent } from './components/admin-evenement-summary/admin-evenement-summary.component';
+import { EvenementSummaryComponent } from './components/evenement-summary/evenement-summary.component';
+import { AdminAdherentSummaryComponent } from './components/admin-adherent-summary/admin-adherent-summary.component';
 
 
 @NgModule({
@@ -36,17 +51,28 @@ import { AccueilComponent } from './components/accueil/accueil.component';
     AdherentCompteEditComponent,
     AdherentFormMessageComponent,
     AccueilComponent,
+    AdminCompteComponent,
+    AdminCreateEventComponent,
+    AdminFicheListComponent,
+    AdminFicheDetailsComponent,
+    AdminEvenementListComponent,
+    AdminEvenementDetailsComponent,
+    EvenementListComponent,
+    EvenementDetailsComponent,
+    AdminAdherentListComponent,
+    AdminAdherentDetailsComponent,
+    AdminFichSummaryComponent,
+    AdminEvenementSummaryComponent,
+    EvenementSummaryComponent,
+    AdminAdherentSummaryComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      {
-        path: 'fichesAnimal',
-        component: FicheAnimalListComponent
-      },
       {
         path: 'accueil',
         component: AccueilComponent
@@ -55,6 +81,10 @@ import { AccueilComponent } from './components/accueil/accueil.component';
         path: '',
         redirectTo: '/accueil',
         pathMatch: 'full'
+      },
+      {
+        path: 'fichesAnimal',
+        component: FicheAnimalListComponent
       },
       {
       path: 'fichesAnimal/:ficheAnimal_idAnim',
@@ -87,6 +117,50 @@ import { AccueilComponent } from './components/accueil/accueil.component';
       {
         path: 'Message',
         component: AdherentFormMessageComponent
+      },
+      {
+        path: 'adminCompte',
+        component: AdminCompteComponent
+      },
+      {
+        path: 'createEvent',
+        component: AdminCreateEventComponent
+      },
+      {
+        path: 'createEvent/:evenement_idEvent',
+        component: AdminCreateEventComponent
+      },
+      {
+        path: 'adminFichesAnimal',
+        component: AdminFicheListComponent
+      },
+      {
+        path: 'adminFichesAnimal/:ficheAnimal_idAnim',
+        component: AdminFicheDetailsComponent
+      },
+      {
+        path: 'adminEvenements',
+        component: AdminEvenementListComponent
+      },
+      {
+        path: 'adminEvenements/:evenement_idEvent',
+        component: AdminEvenementDetailsComponent
+      },
+      {
+        path: 'evenements',
+        component: EvenementListComponent
+      },
+      {
+        path: 'evenements/:evenement_idEvent',
+        component: EvenementDetailsComponent
+      },
+      {
+        path: 'adminAdherents',
+        component: AdminAdherentListComponent
+      },
+      {
+        path: 'adminAdherents/:adherent_idAd',
+        component: AdminAdherentDetailsComponent
       }
   ]),
   ],

@@ -1,0 +1,11 @@
+<div class='adherent panel panel-default'> 
+    <div class="panel-heading">
+      <h3 class="panel-title">Bienvenue {{ adherent.pseudonyme }}</h3>
+    </div>
+    <div class="panel-body" (click)="userClicked()">
+      <p>Nom: {{ adherent.nom }}</p>
+      <p>Prenom : {{ adherent.prenom }}</p>
+      <p>Email : {{ adherent.email }}</p>
+    </div>
+  </div>
+  
