@@ -40,9 +40,4 @@ export class EvenementService {
     JSON.stringify(evenement), this.httpOptions);
   }
 
-  //public findByAdmin(admin: Admin): Observable<any> {
-  //  return this.http.post<Admin>(EVENEMENT_SERVER + '/evenement/ajoutEvent',
-  //  JSON.stringify(admin), this.httpOptions);
-  //}
-
 }

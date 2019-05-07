@@ -39,6 +39,6 @@ export class AdminCompteComponent implements OnInit {
   }
 
   adherentManagementPressed(): void {
-    this.router.navigateByUrl('adminAdherents');
+    this.router.navigateByUrl('/adminAdherents');
   }
 }

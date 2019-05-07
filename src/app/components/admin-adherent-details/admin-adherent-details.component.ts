@@ -19,7 +19,10 @@ export class AdminAdherentDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) =>  {
-      this.getAdherentById(parseInt(params.get('idAd'), 10));
+      console.log('sssss');
+      console.log(params.get('adherent_idAd'));
+
+      this.getAdherentById(parseInt(params.get('adherent_idAd'), 10));
     });
   }
 

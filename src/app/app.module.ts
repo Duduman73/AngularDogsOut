@@ -23,6 +23,7 @@ import { AdminEvenementDetailsComponent } from './components/admin-evenement-det
 import { AdminAdherentSummaryComponent } from './components/admin-adherent-summary/admin-adherent-summary.component';
 import { AdminAdherentListComponent } from './components/admin-adherent-list/admin-adherent-list.component';
 import { AdminAdherentDetailsComponent } from './components/admin-adherent-details/admin-adherent-details.component';
+import { AdminCompteComponent } from './components/admin-compte/admin-compte.component';
 
 
 
@@ -44,7 +45,8 @@ import { AdminAdherentDetailsComponent } from './components/admin-adherent-detai
     AdminEvenementDetailsComponent,
     AdminAdherentSummaryComponent,
     AdminAdherentListComponent,
-    AdminAdherentDetailsComponent
+    AdminAdherentDetailsComponent,
+    AdminCompteComponent
     ],
   imports: [
     BrowserModule,
@@ -54,8 +56,12 @@ import { AdminAdherentDetailsComponent } from './components/admin-adherent-detai
     RouterModule.forRoot([
       {
         path: '',
-        redirectTo: '/adminAdherents',
+        redirectTo: '/adminCompte',
         pathMatch: 'full'
+      },
+      {
+        path: 'adminCompte',
+        component: AdminCompteComponent
       },
       {
         path: 'createEvent',
@@ -99,7 +105,7 @@ import { AdminAdherentDetailsComponent } from './components/admin-adherent-detai
         component: AdminAdherentListComponent
       },
       {
-        path: 'adminAdherents/:adminAdherent_idAd',
+        path: 'adminAdherents/:adherent_idAd',
         component: AdminAdherentDetailsComponent
       }
   ]),
