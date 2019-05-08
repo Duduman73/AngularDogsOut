@@ -1,14 +1,28 @@
+<div class="w-100 p-3" style="background-color: #eee;"><b>Remplissez le formulaire ci-dessous pour envoyer un message.</b></div>
+
+
+<div class='cover-photo-holder'>
+    <img src="/assets/logoDogsOut.JPG"/>
+ </div>
+
+ <div class='cover-photo-holder2'>
+    <img src="/assets/logoDogsOut.JPG"/>
+ </div>
+
+<form id="MessageAdherent">
 <div class="message">
-    <div class="input-group">
+    <div class="col-sm-3 my-2">
         <label>Objet du message : </label>
         <input type="text" class="form-control" name="objet"/>
       </div>
-    <div class="form-group">
+    <div class="col-sm-3 my-2">
       <label>Message : </label>
         <textarea rows="10" class="form-control" name="description">
         </textarea>
     </div>
 </div>
 
-<div style="float: right; padding: 5px"><input type="button" value="Valider message"
+
+<div style="padding: 5px" id="Validation"><input type="button" value="Valider message"
   (click)="validationMessagePressed()"/></div>
+</form>
