@@ -13,7 +13,9 @@ export class AdherentCompteEditComponent implements OnInit {
   adherent_in_progress: Adherent;
   mode_access: string;
 
-  constructor(private router: Router, private adherentService: AdherentService, private route: ActivatedRoute) { }
+  constructor(private router: Router, private adherentService: AdherentService, private route: ActivatedRoute) { 
+    this.adherent_in_progress = Adherent.createBlank();
+  }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
@@ -41,9 +43,9 @@ export class AdherentCompteEditComponent implements OnInit {
   }
 
   public addAdherent(adherent: Adherent): void {
-
+        console.log('Ajout');
         this.adherentService.createAdherent(adherent).subscribe(
-          (data) => {
+          (response) => {
             this.router.navigateByUrl('/accueil');
           }
         );

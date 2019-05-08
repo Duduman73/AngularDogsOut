@@ -23,6 +23,9 @@ export class Adherent {
                 this.pseudonyme = pseudonyme;
                 this.mdp = mdp;
                 }
+    public static createBlank(): Adherent {
+        return new Adherent(-1, null, null, null, null, null, null, null, null, null);
+    }
 
     public static adherentFromJSON(obj: any): Adherent {
         return new Adherent(obj.idAd, obj.nom, obj.prenom, obj.adresse, obj.ville, obj.cp,

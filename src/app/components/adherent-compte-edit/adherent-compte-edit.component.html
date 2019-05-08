@@ -1,42 +1,47 @@
 <div class="w-100 p-3" style="background-color: #eee;"><b>Création / Mise à jour du compte</b></div>
 
-<div class="CompteAdherentUpadate panel panel-default">
-    <div class="panel-heading">
-      <h4>Création / Mise à jour du compte</h4>
-    </div>
-    <div class="input-group">
+<div class='cover-photo-holder'>
+    <img src="/assets/logoDogsOut.JPG"/>
+ </div>
+
+ <div class='cover-photo-holder2'>
+    <img src="/assets/logoDogsOut.JPG"/>
+ </div>
+
+<form id="formAdherent">
+    <div class="col-sm-3 my-2">
         <label>Nom : </label>
         <input type="text" class="form-control" [(ngModel)]="adherent_in_progress.nom" name="nom"/>
     </div>
-    <div class="input-group">
+    <div class="col-sm-3 my-2">
         <label>Prenom : </label>
         <input type="text" class="form-control" [(ngModel)]="adherent_in_progress.prenom" name="prenom"/>
     </div>
-    <div class="input-group">
+    <div class="col-sm-3 my-2">
         <label>Adresse : </label>
         <input type="text" class="form-control" [(ngModel)]="adherent_in_progress.adresse" name="adresse"/>
     </div>
-    <div class="input-group">
+    <div class="col-sm-3 my-2">
         <label>Ville : </label>
         <input type="text" class="form-control" [(ngModel)]="adherent_in_progress.ville" name="ville"/>
     </div>
-    <div class="input-group">
+    <div class="col-sm-3 my-2">
         <label>Code postale : </label>
         <input type="text" class="form-control" [(ngModel)]="adherent_in_progress.cp" name="cp"/>
     </div>
-    <div class="input-group">
+    <div class="col-sm-3 my-2">
         <label>Age : </label>
         <input type="text" class="form-control" [(ngModel)]="adherent_in_progress.age" name="age"/>
     </div>
-    <div class="input-group">
+    <div class="col-sm-3 my-2">
         <label>Email : </label>
         <input type="text" class="form-control" [(ngModel)]="adherent_in_progress.email" name="email"/>
     </div>
-    <div class="input-group">
+    <div class="col-sm-3 my-2">
         <label>Mot de passe : </label>
         <input type="text" class="form-control" [(ngModel)]="adherent_in_progress.mdp" name="mot de passe"/>
     </div>
-    <div class="input-group">
+   <div class="input-group">
       <input type="button" value="Création / Mise à jour du Compte" (click)="addUpdateAdherentClicked()"/>
     </div>
-</div>
+</form>
