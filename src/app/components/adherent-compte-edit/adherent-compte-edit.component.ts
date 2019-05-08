@@ -44,7 +44,7 @@ export class AdherentCompteEditComponent implements OnInit {
 
         this.adherentService.createAdherent(adherent).subscribe(
           (data) => {
-            this.router.navigateByUrl('/compteAdherent');
+            this.router.navigateByUrl('/accueil');
           }
         );
       }

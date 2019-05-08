@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import {ButtonModule} from 'primeng/button';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -72,6 +73,7 @@ import { AdminAdherentSummaryComponent } from './components/admin-adherent-summa
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ButtonModule,
     RouterModule.forRoot([
       {
         path: 'accueil',
@@ -112,6 +114,10 @@ import { AdminAdherentSummaryComponent } from './components/admin-adherent-summa
       },
       {
         path: 'compteAdherentEdit/:idAd',
+        component: AdherentCompteEditComponent
+      },
+      {
+        path: 'compteAdherentEdit',
         component: AdherentCompteEditComponent
       },
       {

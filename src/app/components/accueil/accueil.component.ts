@@ -21,4 +21,7 @@ export class AccueilComponent implements OnInit {
     this.router.navigateByUrl('/adminCompte');
   }
 
+  addNewCompteAdherentPressed(): void {
+    this.router.navigateByUrl('/compteAdherentEdit');
+  }
 }
