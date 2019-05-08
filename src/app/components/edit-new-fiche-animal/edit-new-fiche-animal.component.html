@@ -1,41 +1,49 @@
-<div class="newFicheAnimal panel panel-default">
-  <div class="panel-heading">
-    <h4>Creation d'une nouvelle fiche</h4>
-  </div>
-  <div class="panel-body">
-    <div class="form-group">
-      <input class="form-control" [(ngModel)]="ficheAnimal_in_progress.nomAnim" type="text" name="nom"/>
+<div class="w-100 p-3" style="background-color: #eee;"><b>Création d'une nouvelle fiche animale</b></div>
+
+<div class='cover-photo-holder'>
+  <img src="/assets/logoDogsOut.JPG"/>
+</div>
+
+<div class='cover-photo-holder2'>
+  <img src="/assets/logoDogsOut.JPG"/>
+</div>
+
+<form id="formFicheAnimal">
+    <div class="col-sm-3 my-2">
+      <input class="form-control" [(ngModel)]="ficheAnimal_in_progress.nomAnim" type="text" name="nom" placeholder="Nom"/>
     </div>
-    <div class="form-group">
+    <div class="col-sm-3 my-2">
       <textarea rows="5" [(ngModel)]="ficheAnimal_in_progress.description" class="form-control" name="description">
       </textarea>
     </div>
-    <div class="input-group">
+    <div class="col-sm-3 my-2">
       <label>Age : </label>
       <input type="text" class="form-control" [(ngModel)]="ficheAnimal_in_progress.age" name="age"/>
       <span class="input-group-addon"> ans</span>
     </div>
-    <div class="input-group">
+    <div class="col-sm-3 my-2">
       <label>Race : </label>
       <input type="text" class="form-control" [(ngModel)]="ficheAnimal_in_progress.race" name="race"/>
     </div>
-    <div class="input-group">
+    <div class="col-sm-3 my-2">
       <label>Personnalité : </label>
       <input type="text" class="form-control" [(ngModel)]="ficheAnimal_in_progress.personnalite" name="personnalite"/>
     </div>
-    <div class="input-group">
+    <div class="col-sm-3 my-2">
       <label>Humeur : </label>
       <input type="text" class="form-control" [(ngModel)]="ficheAnimal_in_progress.humeur" name="humeur"/>
     </div>
-    <div class="input-group">
+    <div class="col-sm-3 my-2">
       <label>Lieu préféré : </label>
       <input type="text" class="form-control" [(ngModel)]="ficheAnimal_in_progress.lieuPrefere" name="lieu prefere"/>
     </div>
-    <div class="input-group">
+    <div class="col-sm-3 my-2">
         <label>Sexe : </label>
-        <input type="text" class="form-control" [(ngModel)]="ficheAnimal_in_progress.sexe" name="sexe"/>
+       <!-- <input type="text" class="form-control" [(ngModel)]="ficheAnimal_in_progress.sexe" name="sexe"/> -->
+        <input type="radio" name="gender" value=false checked> Male<br>
+        <input type="radio" name="gender" value=true> Female<br>
       </div>
-      <div class="input-group">
+      <div class="col-sm-3 my-2">
         <label>Identifiant adhérent : </label>
         <input type="text" class="form-control" [(ngModel)]="ficheAnimal_in_progress.adherent.idAd" name="idAd"/>
       </div>
@@ -43,5 +51,5 @@
       <input type="button" value="Ajout Fiche" (click)="addUpdateFicheAnimalClicked()"/>
     </div>
 
-  </div>
-</div>
+  </form>
+
