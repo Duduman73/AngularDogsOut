@@ -1,4 +1,15 @@
-<div style = "float: right; padding: 5px"><input type="button" value="Ajouter Evenement"
+<div class="w-100 p-3" style="background-color: #eee;"><b>Voici la liste de tous les évènements !</b></div>
+
+
+<div class="Ajout"><input type="button" value="Ajouter Evenement"
   (click)="addNewEventPressed()"/></div>
 
+  <div class='cover-photo-holder'>
+    <img src="/assets/logoDogsOut.JPG"/>
+  </div>
+
+  
+
 <app-admin-evenement-summary *ngFor="let evenement of evenements" [evenement]="evenement" (userClick)="userClickedOnEvenement($event)"></app-admin-evenement-summary>
+
+

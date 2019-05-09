@@ -57,10 +57,11 @@ export class AdminCreateEventComponent implements OnInit {
   }
 
   public addEvenement(evenement: Evenement): void {
-
+    console.log('Ajout');
     this.adminService.getAdminById(evenement.admin.numAdmin).subscribe(
       (response) => {
         evenement.admin = response;
+        console.log('Evenement');
         this.evenementService.createEvenement(evenement).subscribe(
           (data) => {
             this.router.navigateByUrl('/evenements');
