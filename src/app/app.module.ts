@@ -111,6 +111,10 @@ import {CardModule} from 'primeng/card';
         component: AdherentFicheDetailsComponent
       },
       {
+        path: 'adherentFicheAnimal',
+        component: AdherentFicheAnimalComponent
+      },
+      {
       path: 'editnewFicheAnimal',
       component: EditNewFicheAnimalComponent
       },
