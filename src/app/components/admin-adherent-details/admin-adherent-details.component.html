@@ -1,16 +1,35 @@
-<p><a (click)="goBackButtonPressed()" style='cursor: pointer'>Go Back</a>
-  <a (click)="deleteButtonPressed()" style='cursor: pointer'>Delete</a></p>
-<div class='adherent panel panel-default'> 
-  <div class="panel-body">
-    <p>Id adhérent : {{ adherent.idAd }}</p>
-    <p>Pseudonyme: {{ adherent.pseudonyme }}</p>
-    <p>Nom: {{ adherent.nom }}</p>
-    <p>Prenom : {{ adherent.prenom }}</p>
-    <p>Age : {{ adherent.age }}</p>
-    <p>Adresse : {{ adherent.adresse }}</p>
-    <p>Ville : {{ adherent.ville }}</p>
-    <p>Code postale : {{ adherent.cp }}</p>
-    <p>Email : {{ adherent.email }}</p>
-    <p>Mot de passe : {{ adherent.mdp }}</p>
+<div class="w-100 p-3" style="background-color: #eee;"><b>Voici les détails du compte de {{ adherent.pseudonyme }}</b></div>
+
+
+
+<button style="background-color: rgb(202, 157, 61)"><a (click)="deleteButtonPressed()" style='cursor: pointer'>Delete</a></button>
+<button style="background-color: #44AABF"><a (click)="goBackButtonPressed()" style='cursor: pointer'>Go Back</a> </button>
+
+
+  <div class="infoAdherent">
+    <div class="data-title">Pseudonyme : </div>
+    <div class="info">{{ adherent.pseudonyme }}</div>
+    <div class="data-title">Nom : </div>
+    <div class="info">{{ adherent.nom }}</div>
+    <div class="data-title">prenom : </div>
+    <div class="info">{{ adherent.prenom }}</div>
+    <div class="data-title">Age : </div>
+    <div class="info">{{ adherent.age }}</div>
+    <div class="data-title">Adresse : </div>
+    <div class="info">{{ adherent.adresse }}</div>
+    <div class="data-title">Vile : </div>
+    <div class="info">{{ adherent.ville }}</div>
+    <div class="data-title">Code postal : </div>
+    <div class="info">{{ adherent.cp }}</div>
+    <div class="data-title">Email : </div>
+    <div class="info">{{ adherent.email }}</div>
+    <div class="data-title">Mot de passe : </div>
+    <div class="info">{{ adherent.mdp }}</div>
+    <div class="data-title">Id adhérent : </div>
+    <div class="info">{{ adherent.idAd }}</div>
   </div>
-</div>
+
+  <div class='cover-photo-holder'>
+    <img src="/assets/logoDogsOut.JPG"/>
+ </div>
+ 

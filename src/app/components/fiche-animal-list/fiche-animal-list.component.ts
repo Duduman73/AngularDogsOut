@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FicheAnimal } from '../../model/ficheAnimal';
 import { Router } from '@angular/router';
 import { FicheAnimalService } from '../../services/fiche-animal.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-fiche-animal-list',
@@ -12,7 +13,7 @@ export class FicheAnimalListComponent implements OnInit {
 
   fichesAnimal: FicheAnimal[];
 
-  constructor(private ficheAnimalService: FicheAnimalService, private router: Router) {
+  constructor(private ficheAnimalService: FicheAnimalService, private router: Router, private location: Location) {
     this.getAllFicheAnimal();
   }
 
@@ -29,6 +30,10 @@ export class FicheAnimalListComponent implements OnInit {
       this.fichesAnimal = response;
       console.log(this.fichesAnimal);
     });
+  }
+
+  goBackButtonPressed(): void {
+    this.location.back();
   }
 
 }
