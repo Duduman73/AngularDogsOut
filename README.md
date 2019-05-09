@@ -26,32 +26,28 @@ These instructions will get you a copy of the project up and running on your loc
  Navigate to the project directory and use the next command:
 
 ```
-$ mvn test 
+$ ng test
 ```
 
 # Installing
 To install the project use the next command:
 
 ```
-$ mvn install
+$ npm install
 ```
 
 # Running
 To run the project use the next command:
 
 ```
-$ mvn spring-boot:run
+$ ng serve
 ```
 
 # Technologies
-* [Java EE](https://www.oracle.com/technetwork/java/javaee/overview/index.html) - The web framework used
-* [Spring Boot](https://spring.io/projects/spring-boot) - The framework used for Microservice Architecture
-* [Spring Data JPA](https://spring.io/projects/spring-data-jpa) - The framework used in the persistence Layer
-* [Spring WebService](https://spring.io/projects/spring-ws) - The framework used in the Rest Controller Layer
-* [JUnit](https://junit.org/junit5/) - The framework used in the unit test
-* [Mockito](https://site.mockito.org/) - The framework used in the unit test
-* [Maven](https://maven.apache.org/) - Dependency Management
+Refer to this project https://github.com/CamilleMarx/ProjetFinalAdaming for the BackEnd
 * [Angular](https://angular.org/) - Frontend Framework used
+* [Bootstrap](https://getbootstrap.com/) - Frontend Components Library
+* [PrimeNG](https://www.primefaces.org/primeng/#/) - Frontend User Interface Suite
 
 #Authors
 * Durand Etienne - https://github.com/Duduman73
