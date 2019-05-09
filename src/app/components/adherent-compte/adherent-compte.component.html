@@ -1,6 +1,48 @@
+<div class="container-fluid bg-1 text-center">
+    <div class="row">
+    <div class="col-sm-4">
+        <img src="/assets/Profil.png" width="60" height="60"/><h2>MON COMPTE</h2>
+    </div>
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">
+        <img src="/assets/user_head.png" width="80px" height="80px"/><br><button type="button" class="btn btn-outline-info"><app-adherent-summary [adherent] = "adherent" (userClick)="userClickedOnAdherent($event)"></app-adherent-summary></button>
+    </div>
+    </div>
+</div>
+<div class="container-fluid bg-2 text-center">
+        <div class="row">
+        <div class="col-sm-2">
+        <button type="button" class="btn btn-outline-info"><a (click)="goBackButtonPressed()" style='cursor: pointer'>Accueil</a></button>
+        </div>
+        <div class="col-sm-2">
+                <button type="button" class="btn btn-outline-info" (click)="userClickedOnMesAnimaux()" style='cursor: pointer'>Mes Amis</button>
+        </div>
+        <div class="col-sm-2">
+            <button type="button" class="btn btn-outline-info" (click)="userClickedOnEvenement()" style='cursor: pointer'>Evenements</button>
+        </div>
+        <div class="col-sm-4 text-right">
+            <img src="/assets/envellope.jpg" width="40px" height="40px"/> Mes Nouveaux Messages
+        </div>
+        </div>
+</div>
+<div class="container-fluid bg-3 text-center">
+        <div class="row">
+        <div class="comp">
+           <a (click)="ficheAnimalListButtonPressed()" style='cursor: pointer'><img src="/assets/dog_head.png" width="250px" height="250px"/><br>Trouver un copain</a>
+        </div>
+        <div class="col-sm-8">
+        
+        </div>
+        </div>
+</div>
+<div class="bg-4 container-fluid">
+    <br>
+    <br>
+    <br>
+<marquee class="marquee" behavior="scroll" direction="left" scrollamount="10"><img src="/assets/gif_chien.gif" height="80" width="100"/></marquee>
+</div>
+
+
 <div style="float: right; padding: 5px"><input type="button" value="Ajouter une fiche"
     (click)="addNewFicheAnimalPressed()"/></div>
-    <p><a (click)="ficheAnimalListButtonPressed()" style='cursor: pointer'>Trouver un copain</a></p>
-
-<app-adherent-summary [adherent] = "adherent" (userClick)="userClickedOnAdherent($event)"></app-adherent-summary>
-<app-adherent-fiche-animal *ngFor="let ficheAnimal of fichesAnimal" [ficheAnimal]="ficheAnimal" (userClick)="userClickedOnFicheAnimal($event)"></app-adherent-fiche-animal>

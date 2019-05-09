@@ -1,0 +1,32 @@
+.bg-1 { 
+    background-color: #F2EFD5;
+    color: #000000;
+}
+
+  .bg-2 { 
+    background-color: #F1F1F1;
+    color: #000000;
+    padding: 15px;
+  }
+
+  .bg-3 { 
+    padding: 30px;
+  }
+
+  .container-fluid {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+ .comp {
+    margin-top: 100px;
+    margin-left: 300px;
+ }
+
+ .marquee {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+ }
+
