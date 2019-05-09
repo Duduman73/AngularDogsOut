@@ -14,7 +14,7 @@ export class Evenement {
         this.dateDeb = dateDeb;
         this.dateFin = dateFin;
         this.lieu = lieu;
-        this.admin = new Admin(null, null, null, null, null, null, null, null, null, null, null);
+        this.admin = new Admin(null, null, null, null, null, null, null, null, null, null, null, null);
     }
 
     public static evenementFromJSON(obj: any): Evenement {

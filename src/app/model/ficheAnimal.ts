@@ -26,7 +26,7 @@ export class FicheAnimal {
         this.description = description;
         this.lieuPrefere = lieuPrefere;
         this.cover_photo = cover_photo;
-        this.adherent = new Adherent(null, null, null, null, null, null, null, null, null, null);
+        this.adherent = new Adherent(null, null, null, null, null, null, null, null, null, null, null);
 
     }
 

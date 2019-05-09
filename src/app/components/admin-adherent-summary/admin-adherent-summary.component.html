@@ -1,11 +1,16 @@
-<div class='adherent panel panel-default'> 
-    <div class="panel-heading">
-      <h3 class="panel-title">Bienvenue {{ adherent.pseudonyme }}</h3>
+<p-toast [style]="{marginTop: '80px'}"></p-toast>
+
+<p-panel header="{{ adherent.pseudonyme }}" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+    <div class="row" (click)="userClicked()">
+        <div class="col-4">
+            <img src="{{ adherent.cover_photo ? adherent.cover_photo : '/assets/anonyme.png' }}" width="100" length="100" class="rounded-0"/>
+          </div>
+      <div class="col-4">
+          <div class="row">Nom: {{ adherent.nom }}</div>
+          <div class="row">Prenom : {{ adherent.prenom }}</div>
+      </div>
+      <div class="col-4">
+          <div class="row">Email : {{ adherent.email }}</div>
+      </div>
     </div>
-    <div class="panel-body" (click)="userClicked()">
-      <p>Nom: {{ adherent.nom }}</p>
-      <p>Prenom : {{ adherent.prenom }}</p>
-      <p>Email : {{ adherent.email }}</p>
-    </div>
-  </div>
-  
+</p-panel>

@@ -40,8 +40,8 @@
     <div class="col-sm-3 my-2">
         <label>Sexe : </label>
        <!-- <input type="text" class="form-control" [(ngModel)]="ficheAnimal_in_progress.sexe" name="sexe"/> -->
-        <input type="radio" name="gender" value=false checked> Male<br>
-        <input type="radio" name="gender" value=true> Female<br>
+        <input type="radio" [(ngModel)]="ficheAnimal_in_progress.sexe"  name="gender" value="false" > Male<br>
+        <input type="radio" [(ngModel)]="ficheAnimal_in_progress.sexe" name="gender" value="true"> Female<br>
       </div>
       <div class="col-sm-3 my-2">
         <label>Identifiant adhérent : </label>

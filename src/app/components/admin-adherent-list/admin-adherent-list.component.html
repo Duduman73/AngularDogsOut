@@ -1,2 +1,6 @@
+<div class="w-100 p-3" style="background-color: #eee;"><b>Voici la liste des adhérents</b></div>
+
+<button type="button" class="btn btn-outline-secondary" (click)="goBackButtonPressed()">Retour au compte Admin</button>
+<br>
 
 <app-admin-adherent-summary *ngFor="let adherent of adherents" [adherent]="adherent" (userClick)="userClickedOnAdherent($event)"></app-admin-adherent-summary>

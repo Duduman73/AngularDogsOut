@@ -64,7 +64,7 @@ export class AdminCreateEventComponent implements OnInit {
         console.log('Evenement');
         this.evenementService.createEvenement(evenement).subscribe(
           (data) => {
-            this.router.navigateByUrl('/evenements');
+            this.router.navigateByUrl('adminEvenements');
           }
         );
       }

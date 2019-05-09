@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Adherent } from '../../model/adherent';
 import { Router } from '@angular/router';
 import { AdherentService } from '../../services/adherent.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-admin-adherent-list',
@@ -12,7 +13,7 @@ export class AdminAdherentListComponent implements OnInit {
 
   adherents: Adherent[];
 
-  constructor(private adherentService: AdherentService, private router: Router) {
+  constructor(private adherentService: AdherentService, private router: Router, private location: Location) {
     this.getAllAdherent();
   }
 
@@ -29,5 +30,9 @@ export class AdminAdherentListComponent implements OnInit {
       this.adherents = response;
       //console.log(this.adherents);
     });
+  }
+
+  goBackButtonPressed(): void {
+    this.location.back();
   }
 }

@@ -64,6 +64,7 @@ export class EditNewFicheAnimalComponent implements OnInit {
     if (this.mode_access === 'MODIFICATION') {
       this.updateFicheAnimal(this.ficheAnimal_in_progress);
     } else {
+      console.log(this.ficheAnimal_in_progress)
       this.addFicheAnimal(this.ficheAnimal_in_progress);
     }
   }
