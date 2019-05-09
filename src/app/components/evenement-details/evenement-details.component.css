@@ -1,0 +1,40 @@
+.evenementDetails {
+    vertical-align: middle;
+    margin-left: 400px;
+    margin-top: 200px;
+    max-width: 20%;
+    border-width:3px;
+    border-style: groove;
+    border-color: rgb(157, 216, 216);
+    padding: 2px;
+    border-width: 15px;
+    text-align: center;
+}
+
+div.data-title {
+    font-weight: bold;
+    width: 150px;
+    float: left;
+}
+
+div.info {
+    padding: 5px;
+}
+
+button {
+    height: 100px;
+    width: 250px;
+    color:white;
+    font-size: 2.0em;
+    border-radius: 20px;
+    margin: 100px;
+    margin-top: 200px;
+    margin-right: 200px;
+ }
+
+ .cover-photo-holder {
+     float: right;
+     margin-top: 250px;
+     margin-right: 350px;
+ }
+ 

@@ -1,7 +1,13 @@
-<p-card header="{{ evenement.nomEvent }}" [style]="{width: '360px'}" (click)="userClicked()">
-  <div>{{ evenement.lieu }}</div>
-  <div class="col-4">
-      <img src="/assets/ParcChien.jpg" width="300" length="300" class="rounded-0"/>
-  </div>
-</p-card>
-<br>
+<p-toast [style]="{marginTop: '80px'}"></p-toast>
+<p-panel header="{{ evenement.nomEvent }}" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+<div class="row" (click)="userClicked()">
+    <div class="col-4">
+        <img src="/assets/ParcChien.jpg" width="300" length="300" class="rounded-0"/>
+    </div>
+    <div class="col-4">
+      <div class="row">Lieu : &nbsp; {{ evenement.lieu }}</div>
+    </div>
+
+</div>
+</p-panel>
+

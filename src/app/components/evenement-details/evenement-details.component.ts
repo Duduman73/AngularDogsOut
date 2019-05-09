@@ -17,7 +17,7 @@ export class EvenementDetailsComponent implements OnInit {
   evenements: Evenement[];
 
   constructor(private route: ActivatedRoute,
-              private location: Location, private evenementService: EvenementService) { }
+              private location: Location, private evenementService: EvenementService, private router: Router) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
@@ -49,5 +49,9 @@ export class EvenementDetailsComponent implements OnInit {
         this.evenement = response;
         console.log(this.evenement);
       });
+    }
+
+    public inscription(): void {
+      this.router.navigateByUrl('/compteAdherent');
     }
 }

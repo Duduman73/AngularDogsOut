@@ -1,1 +1,6 @@
+<div class="w-100 p-3" style="background-color: #eee;"><b>Voici la liste des évènements</b></div>
+
+<button type="button" class="btn btn-outline-secondary" (click)="goBackButtonPressed()">Retour au Compte</button>
+<br>
+
 <app-evenement-summary *ngFor="let evenement of evenements" [evenement]="evenement" (userClick)="userClickedOnEvenement($event)"></app-evenement-summary>

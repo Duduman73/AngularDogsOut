@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Evenement } from '../../model/evenement';
 import { Router } from '@angular/router';
 import { EvenementService } from '../../services/evenement.service';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-evenement-list',
@@ -12,7 +14,7 @@ export class EvenementListComponent implements OnInit {
 
   evenements: Evenement[];
 
-  constructor(private evenementService: EvenementService, private router: Router) {
+  constructor(private evenementService: EvenementService, private router: Router, private location: Location) {
     this.getAllEvenement();
 
   }
@@ -30,6 +32,10 @@ export class EvenementListComponent implements OnInit {
       this.evenements = response;
       //console.log(this.evenements);
     });
+  }
+
+  goBackButtonPressed(): void {
+    this.location.back();
   }
 
 }
