@@ -1,29 +1,48 @@
-<p><a (click)="goBackButtonPressed()" style='cursor: pointer'>Go Back</a>
-  <a (click)="deleteButtonPressed()" style='cursor: pointer'>Delete</a></p>
-  <div class="panel-heading">
-      <h3 class="panel-title">{{ ficheAnimal.nomAnim }}</h3>
-    <div class="panel-body">
-      <div class='cover-photo-holder'>
-        <img src="{{ ficheAnimal.cover_photo ? ficheAnimal.cover_photo : '/assets/Image_Chien.jpg'}}"/>
+<p-toast [style]="{marginTop: '80px'}"></p-toast>
+
+<p-panel header="{{ ficheAnimal.nomAnim }}" [style]="{'margin-bottom':'20px'}">
+  <div class="row">
+      <div class="col-4">
+        <img src="{{ ficheAnimal.cover_photo ? ficheAnimal.cover_photo : '/assets/Image_Chien.jpg' }}" width="340" length="340" class="rounded-0"/>
       </div>
-      <p>{{ ficheAnimal.race }}</p>
-      <div>
-        <div class="data-title">Sexe:</div>
-        <div>
-        <p *ngIf="ficheAnimal.sexe"> Female </p>
-        <p *ngIf="!ficheAnimal.sexe"> Male </p>
+      <div class="col-4">
+        <div class="row">
+          <p>Race:</p> &nbsp; {{ ficheAnimal.race }}
         </div>
-        <div class="data-title">Age:</div>
-        <div>{{ ficheAnimal.age }}</div>
-        <div class="data-title">Personnalité:</div>
-        <div>{{ ficheAnimal.personnalite }}</div>
-        <div class="data-title">Description:</div>
-        <div>{{ ficheAnimal.description }}</div>
-        <div class="data-title">Humeur:</div>
-        <div>{{ ficheAnimal.humeur }}</div>
-        <div class="data-title">Lieu Préféré:</div>
-        <div>{{ ficheAnimal.lieuPrefere }}</div>
+        <br>
+        <div class="row">
+            <p>Age:</p> &nbsp; {{ ficheAnimal.age }} ans
+        </div>
+        <br>
+        <div class="row">
+            <p *ngIf="ficheAnimal.sexe">Sexe: &nbsp; <img src='/assets/genre_masculin.png' width="50" length="50"/></p>
+            <p *ngIf="!ficheAnimal.sexe">Sexe: &nbsp; <img src='/assets/genre_feminin.png' width="50" length="50"/></p>
+        </div>
       </div>
-    </div>
+      <div class="col-4">
+        <div class="row">
+            <p>Personnalité:</p> &nbsp; {{ ficheAnimal.personnalite }}
+        </div>
+        <br>
+        <div class="row">
+            <p>Humeur:</p> &nbsp; {{ ficheAnimal.humeur }}
+        </div>
+        <br>
+        <div class="row">
+            <p>Lieu Préféré:</p> &nbsp; {{ ficheAnimal.lieuPrefere }}
+        </div>
+      </div>
   </div>
-  
+  <br>
+  <div class="row">
+    <p>Descripton:</p> &nbsp; {{ ficheAnimal.description }}
+  </div>
+  <br>
+  <div class="row">
+      <button type="button" class="btn btn-danger"><a (click)="deleteButtonPressed()" style='cursor: pointer'>Supprimer</a></button>
+  </div>
+</p-panel>
+<br>
+<button type="button" class="btn btn-outline-secondary" (click)="goBackButtonPressed()">Retour à la liste des fiches</button>
+
+

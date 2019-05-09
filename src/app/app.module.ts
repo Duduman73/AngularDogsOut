@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +26,14 @@ import { AdminAdherentSummaryComponent } from './components/admin-adherent-summa
 import { AdminAdherentListComponent } from './components/admin-adherent-list/admin-adherent-list.component';
 import { AdminAdherentDetailsComponent } from './components/admin-adherent-details/admin-adherent-details.component';
 import { AdminCompteComponent } from './components/admin-compte/admin-compte.component';
+
+
+
+import {PanelModule} from 'primeng/panel';
+import {SplitButtonModule} from 'primeng/splitbutton';
+import {MessageService} from 'primeng/api';
+import {ToastModule} from 'primeng/toast';
+import {CardModule} from 'primeng/card';
 
 
 
@@ -48,11 +58,19 @@ import { AdminCompteComponent } from './components/admin-compte/admin-compte.com
     AdminAdherentDetailsComponent,
     AdminCompteComponent
     ],
+
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+
+    PanelModule,
+    SplitButtonModule,
+    ToastModule,
+    CardModule,
+
     RouterModule.forRoot([
       {
         path: '',
@@ -110,7 +128,7 @@ import { AdminCompteComponent } from './components/admin-compte/admin-compte.com
       }
   ]),
   ],
-  providers: [],
+  providers: [MessageService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
