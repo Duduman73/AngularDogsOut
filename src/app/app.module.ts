@@ -37,6 +37,12 @@ import { EvenementSummaryComponent } from './components/evenement-summary/evenem
 import { AdminAdherentSummaryComponent } from './components/admin-adherent-summary/admin-adherent-summary.component';
 
 
+import {PanelModule} from 'primeng/panel';
+import {SplitButtonModule} from 'primeng/splitbutton';
+import {MessageService} from 'primeng/api';
+import {ToastModule} from 'primeng/toast';
+import {CardModule} from 'primeng/card';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,6 +80,10 @@ import { AdminAdherentSummaryComponent } from './components/admin-adherent-summa
     FormsModule,
     HttpClientModule,
     ButtonModule,
+    PanelModule,
+   SplitButtonModule,
+   ToastModule,
+   CardModule,
     RouterModule.forRoot([
       {
         path: 'accueil',
@@ -170,7 +180,7 @@ import { AdminAdherentSummaryComponent } from './components/admin-adherent-summa
       }
   ]),
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

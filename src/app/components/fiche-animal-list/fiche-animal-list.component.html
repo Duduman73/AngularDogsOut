@@ -1,2 +1,4 @@
+<button type="button" class="btn btn-outline-secondary" (click)="goBackButtonPressed()">Retour au Compte</button>
+<br>
 
 <app-fiche-animal-summary *ngFor="let ficheAnimal of fichesAnimal" [ficheAnimal]="ficheAnimal" (userClick)="userClickedOnFicheAnimal($event)"></app-fiche-animal-summary>
