@@ -1,27 +1,61 @@
-# ProjetDogsOut
+# AngularDogsOut
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+It is an end-of-training application. 
+This application allows members to :
+- Create animal files
+- Update these animal files
+- Meet other dog owners
+- Register for events
 
-## Development server
+# Getting started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purpose
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  # Prerequisites
+  To install and run this project you need as requirements:
 
-## Code scaffolding
+  * [Java JDK and JRE](https://www.java.com/fr/download/) - Java 8 or a Higher version
+  * [Maven](https://maven.apache.org/) - Maven 2 or a Higher version
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  # Setting up
+  To download the project, clone it from github using the next command:
+  '''
+   $ git clone https://github.com/Duduman73/AngularDogsOut.git
+   '''
+ 
+ # Running the tests
+ Navigate to the project directory and use the next command:
 
-## Build
+```
+$ mvn test 
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Installing
+To install the project use the next command:
 
-## Running unit tests
+```
+$ mvn install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Running
+To run the project use the next command:
 
-## Running end-to-end tests
+```
+$ mvn spring-boot:run
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+# Technologies
+* [Java EE](https://www.oracle.com/technetwork/java/javaee/overview/index.html) - The web framework used
+* [Spring Boot](https://spring.io/projects/spring-boot) - The framework used for Microservice Architecture
+* [Spring Data JPA](https://spring.io/projects/spring-data-jpa) - The framework used in the persistence Layer
+* [Spring WebService](https://spring.io/projects/spring-ws) - The framework used in the Rest Controller Layer
+* [JUnit](https://junit.org/junit5/) - The framework used in the unit test
+* [Mockito](https://site.mockito.org/) - The framework used in the unit test
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [Angular](https://angular.org/) - Frontend Framework used
 
-## Further help
+#Authors
+* Durand Etienne - https://github.com/Duduman73
+* Marx Camille - https://github.com/CamilleMarx
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# License
+This project is licensed under the MIT License.
