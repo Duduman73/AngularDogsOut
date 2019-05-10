@@ -42,6 +42,7 @@ import {SplitButtonModule} from 'primeng/splitbutton';
 import {MessageService} from 'primeng/api';
 import {ToastModule} from 'primeng/toast';
 import {CardModule} from 'primeng/card';
+import { AdherentFicheAnimalSummaryComponent } from './components/adherent-fiche-animal-summary/adherent-fiche-animal-summary.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import {CardModule} from 'primeng/card';
     AdminFichSummaryComponent,
     AdminEvenementSummaryComponent,
     EvenementSummaryComponent,
-    AdminAdherentSummaryComponent
+    AdminAdherentSummaryComponent,
+    AdherentFicheAnimalSummaryComponent
   ],
   imports: [
     BrowserModule,
@@ -112,7 +114,7 @@ import {CardModule} from 'primeng/card';
       },
       {
         path: 'adherentFicheAnimal',
-        component: AdherentFicheAnimalComponent
+        component: AdherentFicheAnimalSummaryComponent
       },
       {
       path: 'editnewFicheAnimal',

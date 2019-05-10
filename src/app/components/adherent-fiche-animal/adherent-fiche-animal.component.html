@@ -1,28 +1,21 @@
-<div class='ficheAnimal panel panel-default'>
-    <div class="panel-heading">
-      <h3 class="panel-title">{{ ficheAnimal.nomAnim }}</h3>
+<p-toast [style]="{marginTop: '80px'}"></p-toast>
+
+<p-panel header="{{ ficheAnimal.nomAnim }}" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+<div class="row">
+    <div class="col-4">
+      <img src="{{ ficheAnimal.cover_photo ? ficheAnimal.cover_photo : '/assets/Image_Chien.jpg' }}" width="300" length="300" class="rounded-0"/>
     </div>
-    <div class="panel-body">
-      <div class='cover-photo-holder'>
-        <img src="{{ ficheAnimal.cover_photo ? ficheAnimal.cover_photo : '/assets/Image_Chien.jpg'}}"/>
-      </div>
-      <p>{{ ficheAnimal.race }}</p>
-      <div (click)="userClicked()">
-        <div class="data-title">Sexe:</div>
-        <div>
-        <p *ngIf="ficheAnimal.sexe"> Female </p>
-        <p *ngIf="!ficheAnimal.sexe"> Male </p>
-        </div>
-        <div class="data-title">Age:</div>
-        <div>{{ ficheAnimal.age }}</div>
-        <div class="data-title">Personnalité:</div>
-        <div>{{ ficheAnimal.personnalite }}</div>
-        <div class="data-title">Description:</div>
-        <div>{{ ficheAnimal.description }}</div>
-        <div class="data-title">Humeur:</div>
-        <div>{{ ficheAnimal.humeur }}</div>
-        <div class="data-title">Lieu Préféré:</div>
-        <div>{{ ficheAnimal.lieuPrefere }}</div>
-      </div>
+    <div class="col-4">
+      <div class="row">Race: &nbsp; {{ ficheAnimal.race }}</div>
+      <div class="row">Age: &nbsp; {{ ficheAnimal.age }} ans</div>
     </div>
-  </div>
+    <div class="col-4">
+      <p *ngIf="ficheAnimal.sexe">Sexe: &nbsp; <img src='/assets/genre_masculin.png' width="50" length="50"/></p>
+      <p *ngIf="!ficheAnimal.sexe">Sexe: &nbsp; <img src='/assets/genre_feminin.png' width="50" length="50"/></p>
+    </div>
+    <div>
+        <button type="button" class="btn btn-outline-info" (click)="userClicked()">Gérer</button>
+    </div>
+</div>
+</p-panel>
+

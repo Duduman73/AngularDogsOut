@@ -26,7 +26,6 @@ export class AdherentCompteComponent implements OnInit {
     this.ficheAnimal_in_progress = FicheAnimal.createBlank();
 
     this.getAdherentById(2);
-    this.findByAdherent(2);
   }
 
   ngOnInit() {
@@ -36,13 +35,6 @@ export class AdherentCompteComponent implements OnInit {
     this.adherentService.getAdherentById(idAd).subscribe((response) => {
       this.adherent = response;
       console.log(this.adherent);
-    });
-  }
-
-  public findByAdherent(adherent: 2): void {
-    this.ficheAnimalService.findByAdherent(adherent).subscribe((response) => {
-      this.fichesAnimal = response;
-      console.log(this.fichesAnimal);
     });
   }
 

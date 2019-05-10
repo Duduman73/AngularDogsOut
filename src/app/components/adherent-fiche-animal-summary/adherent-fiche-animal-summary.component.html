@@ -1,0 +1,4 @@
+<div class="w-100 p-3" style="background-color: #eee;"><b>Voici la liste de vos animaux</b></div>
+<button type="button" class="btn btn-outline-secondary" (click)="goBackButtonPressed()">Retour au Compte</button>
+
+<app-adherent-fiche-animal *ngFor="let ficheAnimal of fichesAnimal" [ficheAnimal]="ficheAnimal" (userClick)="userClickedOnFicheAnimal($event)"></app-adherent-fiche-animal>

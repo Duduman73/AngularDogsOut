@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Evenement } from '../../model/evenement';
 import { EvenementService } from '../../services/evenement.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class AdminEvenementListComponent implements OnInit {
 
   event_in_progress: Evenement;
 
-  constructor(private evenementService: EvenementService, private router: Router) {
+  constructor(private evenementService: EvenementService, private router: Router, private location: Location) {
     this.getAllEvenement();
     this.event_in_progress = Evenement.createBlank();
   }
@@ -43,5 +44,8 @@ export class AdminEvenementListComponent implements OnInit {
       this.evenements = response;
       //console.log(this.evenements);
     });
+  }
+  goBackButtonPressed(): void { // retourne a la page précedente
+    this.location.back();
   }
 }
